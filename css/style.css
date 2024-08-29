@@ -174,21 +174,21 @@
 
 
 /*** Section Title ***/
-.section-title {
-    position: relative;
-    display: inline-block;
-}
+/*.section-title {*/
+/*    position: relative;*/
+/*    display: inline-block;*/
+/*}*/
 
-.section-title::before {
-    position: absolute;
-    content: "";
-    width: 45px;
-    height: 2px;
-    top: 50%;
-    left: -55px;
-    margin-top: -1px;
-    background: var(--primary);
-}
+/*.section-title::before {*/
+/*    position: absolute;*/
+/*    content: "";*/
+/*    width: 45px;*/
+/*    height: 2px;*/
+/*    top: 50%;*/
+/*    left: -55px;*/
+/*    margin-top: -1px;*/
+/*    background: var(--primary);*/
+/*}*/
 
 .section-title::after {
     position: absolute;
@@ -443,12 +443,12 @@
     transition: .3s;
 }
 
-.footer .btn.btn-link::before {
+.footer .btn.btn-link::after {
     position: relative;
-    content: "\f105";
+    content: "\f104";
     font-family: "Font Awesome 5 Free";
     font-weight: 900;
-    margin-right: 10px;
+    margin-left: 10px;
 }
 
 .footer .btn.btn-link:hover {
@@ -476,4 +476,24 @@
     margin-right: 0;
     padding-right: 0;
     border-right: none;
+}
+
+
+/*custom code*/
+/* Add these styles to your CSS */
+.section-title {
+    position: relative; /* Ensure the parent is positioned */
+}
+
+/* Adjust the ::before pseudo-element */
+.section-title::after {
+    content: "";
+    position: absolute;
+    width: 45px; /* Adjust as needed */
+    height: 2px; /* Adjust as needed */
+    top: 50%;
+    right: -55px; /* Position it to the right */
+    margin-top: -1px;
+    background: var(--primary);
+    display: none;
 }
